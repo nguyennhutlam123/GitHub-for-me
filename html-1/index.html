@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Grand Coffee</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+       >
+      <!--tuần lộc --> 
+      <img class="santa" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/santas.gif" alt="Santa Be Watchin"style="width: 120px;"> />
+   <style>.santa {
+       z-index: 600;
+       cursor: pointer;
+       -webkit-animation: FlyingSanta 38s infinite linear;
+       -moz-animation: FlyingSanta 38s infinite linear;
+       -ms-animation: FlyingSanta 38s infinite linear;
+       -o-animation: FlyingSanta 38s infinite linear;
+       animation: FlyingSanta 38s infinite linear;
+       bottom: 0%;
+       left: 0%;
+       position: absolute;
+   }
+   @keyframes FlyingSanta {
+   25% {
+   bottom: 80%;
+   left: 85%;
+   transform: rotateY(0deg);
+   }
+   26% {
+   transform: rotateY(180deg);
+   }
+   50% {
+    bottom:60%;
+    left: 0%;
+    transform: rotateY(180deg);
+   }
+   51% {
+    transform: rotateY(0deg);
+   }
+   75% {
+    bottom:40%;
+    left: 85%;
+    transform: rotateY(0deg);
+   }
+   76% {
+    bottom:40%;
+    left: 85%;
+    transform: rotateY(180deg);
+   }
+   99% {
+    transform: rotateY(180deg);
+   }
+   }
+   </style>
+   <!--tuyết rơi ngẫu nhiên -->
+   <style>
+      #snowflakeContainer{position:absolute;left:0px;top:0px;}
+      .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#b9e8f0;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+      .snowflake:hover {cursor:default}
+   </style>
+   <div id='snowflakeContainer'>
+   <p class='snowflake'>❄</p>
+   </div>
+   <script style='text/javascript'>
+      //<![CDATA[
+      var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+      //]]>
+   </script>
+   <!--hiệu ứng giáng sinh  -->
+   <script type='text/javascript'>
+ 
+      //<![CDATA[
+       
+      document.write('<img style="position:fixed;z-index:9999;top:0;left:0" src="https://lh6.googleusercontent.com/-c8CoUvCourw/UMcWWTeBE-I/AAAAAAAABcU/q-j9X7733zw/s150/top-left.png style="width: 120px;"/><img style="position:fixed;z-index:9999;top:0;right:0" src="https://lh5.googleusercontent.com/-JABklf9ModU/UMcWWzSSJ4I/AAAAAAAABcY/g4sZMhrgjXU/s150/top-right.png"style="width: 120px;/><div style="position:fixed;z-index:9999;bottom:0;left:0;width:100%;height:104px;background:url(https://lh6.googleusercontent.com/-kph53UsoxM4/UMczVhTsCVI/AAAAAAAABcs/DVTyvtz7blc/s1600/footer.png) repeat-x bottom left;"></div><img style="position:fixed;z-index:9999;bottom:30px;left:30px" src="https://lh4.googleusercontent.com/-mEgGUg-ou4k/UMcz0qy2NhI/AAAAAAAABc0/gF1uW4iE6y0/s180/bottom-left.png"/>');var no=100;var hidesnowtime=0;var snowdistance='pageheight';var ie4up=(document.all)?1:0;var ns6up=(document.getElementById&&!document.all)?1:0;function iecompattest(){return(document.compatMode&&document.compatMode!='BackCompat')?document.documentElement:document.body}var dx,xp,yp;var am,stx,sty;var i,doc_width=800,doc_height=600;if(ns6up){doc_width=self.innerWidth;doc_height=self.innerHeight}else if(ie4up){doc_width=iecompattest().clientWidth;doc_height=iecompattest().clientHeight}dx=new Array();xp=new Array();yp=new Array();am=new Array();stx=new Array();sty=new Array();for(i=0;i<no;++i){dx[i]=0;xp[i]=Math.random()*(doc_width-50);yp[i]=Math.random()*doc_height;am[i]=Math.random()*20;stx[i]=0.02+Math.random()/10; sty[i]=0.7+Math.random();if(ie4up||ns6up){document.write('<div id="dot'+i+'" style="POSITION:absolute;Z-INDEX:'+i+';VISIBILITY:visible;TOP:15px;LEFT:15px;"><span style="font-size:18px;color:#fff">*</span><\/div>')}}function snowIE_NS6(){doc_width=ns6up?window.innerWidth-10:iecompattest().clientWidth-10;doc_height=(window.innerHeight&&snowdistance=='windowheight')?window.innerHeight:(ie4up&&snowdistance=='windowheight')?iecompattest().clientHeight:(ie4up&&!window.opera&&snowdistance=='pageheight')?iecompattest().scrollHeight:iecompattest().offsetHeight;for(i=0;i<no;++i){yp[i]+=sty[i];if(yp[i]>doc_height-50){xp[i]=Math.random()*(doc_width-am[i]-30);yp[i]=0;stx[i]=0.02+Math.random()/10;sty[i]=0.7+Math.random()}dx[i]+=stx[i];document.getElementById('dot'+i).style.top=yp[i]+'px';document.getElementById('dot'+i).style.left=xp[i]+am[i]*Math.sin(dx[i])+'px'}snowtimer=setTimeout('snowIE_NS6()',10)}function hidesnow(){if(window.snowtimer){clearTimeout(snowtimer)}for(i=0;i<no;i++)document.getElementById('dot'+i).style.visibility='hidden'}if(ie4up||ns6up){snowIE_NS6();if(hidesnowtime>0)setTimeout('hidesnow()',hidesnowtime*1000)}
+       
+      //]]>
+       
+      </script>
+      <!--header section start -->
+      <div class="header_section">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!--header section end -->
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="banner_taital">
+                              <h1 class="outstanding_text">Outstanding</h1>
+                              <h1 class="coffee_text">Coffee Shop</h1>
+                              <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, </p>
+                              <div class="learnmore_bt"><a href="#">Learn More</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="banner_taital">
+                              <h1 class="outstanding_text">Outstanding </h1>
+                              <h1 class="coffee_text">Coffee Shop</h1>
+                              <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, </p>
+                              <div class="learnmore_bt"><a href="#">Learn More</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="banner_taital">
+                              <h1 class="outstanding_text">Outstanding </h1>
+                              <h1 class="coffee_text">Coffee Shop</h1>
+                              <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, </p>
+                              <div class="learnmore_bt"><a href="#">Learn More</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="fa fa-angle-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- banner section end -->
+      <!-- about section start -->
+      <div class="about_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="about_taital_main">
+                     <div class="about_taital">About Us</div>
+                     <p class="about_text">Full cleaning and housekeeping services for companies and households.</p>
+                     <p class="about_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply</p>
+                     <div class="read_bt"><a href="#">Read More</a></div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="about_img"><img src="images/about-img.png"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about section end -->
+      <!-- gallery section start -->
+      <div class="gallery_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="gallery_taital">Our Gallery</h1>
+                  <p class="gallery_text">Lorem Ipsum is simply dummy text of printing typesetting ststry lorem Ipsum the industry'ndard dummy text ever since of the 1500s, when an unknown printer took a galley of type and scra make a type specimen book. It has</p>
+               </div>
+            </div>
+            <div class="">
+               <div class="gallery_section_2">
+                  <div class="row">
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-1.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-2.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-3.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="gallery_section_2">
+                  <div class="row">
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-4.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-5.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="overlay">
+                                 <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-6.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="overlay">
+                                 <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="gallery_section_2">
+                  <div class="row">
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-7.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-8.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-9.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="seemore_bt"><a href="#">See More</a></div>
+         </div>
+      </div>
+      <!-- gallery section end -->
+      <!-- services section start -->
+      <div class="services_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="services_taital">Services</h1>
+                  <p class="services_text">Typesetting industry lorem Ipsum is simply dummy text of the </p>
+               </div>
+            </div>
+            <div class="services_section_2">
+               <div class="row">
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                     <div class="box_main active">
+                        <div class="house_icon">
+                           <img src="images/icon1.png" class="image_1">
+                           <img src="images/icon1.png" class="image_2">
+                        </div>
+                        <h3 class="decorate_text">Original Coffee</h3>
+                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                        <div class="readmore_bt"><a href="#">Read More</a></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                     <div class="box_main">
+                        <div class="house_icon">
+                           <img src="images/icon2.png" class="image_1">
+                           <img src="images/icon2.png" class="image_2">
+                        </div>
+                        <h3 class="decorate_text">20 Coffee Flavors</h3>
+                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                        <div class="readmore_bt"><a href="#">Read More</a></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                     <div class="box_main">
+                        <div class="house_icon">
+                           <img src="images/icon3.png" class="image_1">
+                           <img src="images/icon3.png" class="image_2">
+                        </div>
+                        <h3 class="decorate_text">Pleasant Abient</h3>
+                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                        <div class="readmore_bt"><a href="#">Read More</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- services section end -->
+      <!-- testimonial section start -->
+      <div class="client_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="client_taital">Testimonial</h1>
+                  <p class="client_text">Eeven slightly believable. If you are going to use a passage of Lorem Ipsum, you need to</p>
+               </div>
+            </div>
+         </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="client_section_2">
+                <div class="container">
+                   <div class="row">
+                      <div class="col-md-12">
+                         <div class="testimonial_section_2">
+                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="images/quick-icon.png"></span></h4>
+                            <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_section_2">
+                <div class="container">
+                   <div class="row">
+                      <div class="col-md-12">
+                         <div class="testimonial_section_2">
+                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="images/quick-icon.png"></span></h4>
+                            <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_section_2">
+                <div class="container">
+                   <div class="row">
+                      <div class="col-md-12">
+                         <div class="testimonial_section_2">
+                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="images/quick-icon.png"></span></h4>
+                            <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+      <!-- testimonial section end -->
+      <!-- contact section start -->
+      <div class="contact_section layout_padding">
+         <div class="container">
+            <h1 class="contact_text">Contact Us</h1>
+         </div>
+      </div>
+      <div class="contact_section_2 layout_padding">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-6 padding_0">
+                  <div class="mail_section">
+                     <div class="email_text">
+                        <div class="form-group">
+                           <input type="text" class="email-bt" placeholder="Name" name="Email">
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="email-bt" placeholder="Email" name="Email">
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
+                        </div>
+                        <div class="form-group">
+                           <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                        </div>
+                        <div class="send_btn">
+                           <div type="text" class="main_bt"><a href="#">SEND</a></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 padding_0">
+                  <div class="map-responsive">
+                     <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="508" frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- contact section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <h3 class="useful_text">About</h3>
+                  <p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h3 class="useful_text">Menu</h3>
+                  <div class="footer_menu">
+                     <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="useful_text">Useful Link</h1>
+                  <p class="dummy_text">Adipiscing Elit, sed do Eiusmod Tempor incididunt </p>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="useful_text">Contact Us</h1>
+                  <div class="location_text">
+                     <ul>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Loram Ipusm</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +01 1234567890</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : demo@gmail.com</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>     
+   </body>
+</html>
